@@ -1,0 +1,59 @@
+#map {
+    width: 100%;
+    height: 900px;
+}
+
+.country-list-container {
+    display: block;
+    background-color: blanchedalmond;
+    height: 600px;
+    width: 30%;
+    position: absolute;
+    z-index: 10;
+    top: 250px;
+    left: 50px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;
+}
+
+.country-list {
+    padding: 10px;
+    font-size: 20px;
+    font-family: initial;
+    width: 100%;
+}
+
+.some-color {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    left: 80%;
+    top: 10px;
+}
+
+.country {
+    font-size: x-large;
+    color: brown;
+    font-family: cursive;
+}
+
+.total-cases {
+    font-size: 15px;
+    font-family: monospace;
+    color: orange;
+}
+
+.total-deaths {
+    font-size: 15px;
+    font-family: monospace;
+    color: red;
+}
+
+.total-recovered {
+    font-size: 15px;
+    font-family: monospace;
+    color: green;
+}

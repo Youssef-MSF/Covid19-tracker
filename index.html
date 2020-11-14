@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Statistics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/countries.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+
+    <div id="map"></div>
+
+    <h2 style="text-align: center; text-decoration: underline; position: absolute;
+    top: 155px;
+    left: 7%">Countries List :</h2>
+    <div class="country-list-container">
+
+
+
+
+
+
+    </div>
+
+</body>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpWjJWkJcoTu8ndSrE7WIwqOF240LwEV8&callback=initMap">
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        init()
+
+        function init() {
+            var url = "https://api.covid19api.com/summary"
+
+            $.get(url, function(data) {
+
+                data.Countries.forEach(function(item, index) {
+
+                    data += `
+                    <div class="country-list">
+
+<div class="some-color" style="background-color: brown;"></div>
+
+<b>${item.Country}</b><br>
+<i style="opacity: 50%;">MAR</i>
+
+
+</div>
+<hr>
+                    `
+
+                })
+
+                $(".country-list-container").html(data)
+            })
+        }
+
+    })
+</script>
+
+</html>
